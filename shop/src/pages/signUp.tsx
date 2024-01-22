@@ -73,7 +73,7 @@ function App() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <Button />
+        <Button value="send" />
         <div className="flex  mt-9">
           <p className="hover:underline mr-10">Log-In</p>
           <p className=" hover:underline">forgot password</p>
