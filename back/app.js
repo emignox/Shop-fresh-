@@ -39,6 +39,8 @@ app.get("/signup", async (req, res) => {
 app.use(express.json());
 
 app.post("/signup", async (req, res) => {
+  console.log("Request body:", req.body); // log the request body
+
   try {
     if (typeof req.body !== "object" || req.body === null) {
       return res.status(400).send("Invalid request body");
@@ -47,18 +49,15 @@ app.post("/signup", async (req, res) => {
     const collection = client.db("Fresh").collection("signup");
     const result = await collection.insertOne(req.body);
 
-    console.log(result); // log the result to see what it contains
+    console.log("Insert result:", result); // log the result to see what it contains
 
-    if (!result.ops || result.ops.length === 0) {
-      return res.status(500).send("No document was inserted");
-    }
-
-    res.status(201).json(result.ops[0]);
+    res.status(200).json({ _id: result.insertedId, ...req.body });
   } catch (err) {
-    console.error(err);
+    console.error("Error:", err); // log the error
     res.status(500).send("Error while adding data");
   }
 });
+
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
