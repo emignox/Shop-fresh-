@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Poire from "/fragola.png";
 import Verdura from "/carciofo.png";
 import FruttaSecca from "/pistache.png";
-import Splash from "/schizzo.png";
+import Splash from "/splash5.png";
 
 const images = [Poire, Verdura, FruttaSecca];
 const texts = ["JUICY FRUITS", "VEGETABLES", "DRY FRUITS"];
@@ -27,7 +27,7 @@ function Jumbo() {
           Welcome to FRESH <br />
           Choose your{" "}
           <span
-            className=" fade-in-out"
+            className=" fadeInOut"
             style={{ color: "#e11c37", fontStyle: "italic" }}
           >
             {texts[index]}
@@ -37,12 +37,12 @@ function Jumbo() {
         </h1>
         <div className="w-1/2 h-64  lg:w-1/3 ">
           <img
-            className="lg:w-2/2  relative  lg:relative     "
+            className="lg:w-2/2   relative  float lg:relative lg:top-16     "
             src={Splash}
             alt=""
           />{" "}
           <img
-            className=" relative bottom-44 float    lg:mt-5  z-10  lg:relative lg:bottom-96 lg:left-10   lg:w-2/2 lg:h-96"
+            className=" relative bottom-44  float    lg:mt-5  z-10  lg:relative lg:bottom-96 lg:left-10   lg:w-2/2 lg:h-96"
             src={images[index]}
             alt=""
           />

@@ -6,6 +6,7 @@ export default {
       colors: {
         "custom-red": "#e11c37",
         "custom-black": "#080101",
+        "custom-yellow": "#e9b226",
       },
     },
   },
