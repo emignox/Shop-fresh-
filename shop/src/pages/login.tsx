@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import Button from "../components/button";
+import Logo from "../components/logo";
 
 function Login() {
   const [name, setName] = useState("");
@@ -31,6 +32,11 @@ function Login() {
         className=" h-screen flex flex-col justify-center items-center"
         onSubmit={handleSubmit}
       >
+        <div className="mb-10">
+          {" "}
+          <Logo />
+        </div>
+
         <label className=" text-2xl  font-black text-center my-2">
           Nome:
           <br />

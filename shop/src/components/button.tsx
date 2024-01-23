@@ -7,11 +7,12 @@ interface InviaProps {
 
 const Invia: React.FC<InviaProps> = ({ value }) => {
   return (
-    <button
-      className="flex rounded-md border-2 w-32 border-black  justify-center mt-12"
-      style={{ backgroundColor: "#e11c37" }}
-    >
-      <input className=" font-black  text-lg " type="submit" value={value} />
+    <button className="flex rounded-md border-2 w-32 border-black bg-custom-red  justify-center mt-12  lg:w-52">
+      <input
+        className=" text-custom-black  text-lg lg:text-2xl lg:font-bold   "
+        type="submit"
+        value={value}
+      />
       <img className="w-7" src={Foto} alt="" />
     </button>
   );
