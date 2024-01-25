@@ -27,7 +27,7 @@ h1 {
 
 .float {
   animation:
-    float 4s ease-in-out infinite,
+    float 3s ease-in-out infinite,
     slideInOut 7s ease-in-out infinite;
 }
 

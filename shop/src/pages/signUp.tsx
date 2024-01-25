@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Button from "../components/button";
 import Logo from "../components/logo";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -75,7 +77,12 @@ function App() {
         </label>
         <Button value="send" />
         <div className="flex  mt-9">
-          <p className="hover:underline mr-10">Log-In</p>
+          <p
+            className="hover:underline mr-10"
+            onClick={() => navigate("/login")}
+          >
+            Log-In
+          </p>
           <p className=" hover:underline">forgot password</p>
         </div>
       </form>

@@ -2,14 +2,17 @@ import { useState, useEffect } from "react";
 import BigNav from "../components/bigNav";
 import MobileMenu from "../components/mobileMenu";
 import Jumbo from "../components/jumbotron";
-import Button from "../components/button";
 import PresentationsCard from "../components/presentationsCards";
 import Pub from "../components/pub";
 import { FiArrowDown } from "react-icons/fi";
 import Footer from "../components/footer";
+import Farm from "../components/farm";
+import Foto from "/papaya.png";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [iconOpacity, setIconOpacity] = useState(1);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => {
@@ -27,7 +30,13 @@ function Home() {
         <Jumbo />
 
         <div className="flex flex-col justify-center items-center">
-          <Button value="SHOP NOW" />
+          <button
+            onClick={() => navigate("/shop")}
+            className="flex rounded-md border-2 w-32 border-black bg-custom-red lg:bg-custom-yellow  lg:hover:bg-custom-red transition duration-500 ease-in-out  justify-center mt-12  lg:w-52  cursor-pointer  text-custom-black  text-lg lg:text-2xl lg:font-bold "
+          >
+            SHOP NOW!
+            <img className="w-7" src={Foto} alt="" />
+          </button>{" "}
           <FiArrowDown
             className="text-5xl mt-28 animate-bounce"
             style={{ opacity: iconOpacity }}
@@ -35,6 +44,8 @@ function Home() {
         </div>
         <PresentationsCard />
         <Pub />
+        <Farm />
+
         <Footer />
       </div>
 
@@ -44,7 +55,13 @@ function Home() {
         <Jumbo />
 
         <div className=" justify-center items-center flex flex-col ">
-          <Button value="SHOP NOW" />
+          <button
+            onClick={() => navigate("/shop")}
+            className="flex rounded-md border-2 w-32 border-black bg-custom-red lg:bg-custom-yellow  lg:hover:bg-custom-red transition duration-500 ease-in-out  justify-center mt-12  lg:w-52  cursor-pointer  text-custom-black  text-lg lg:text-2xl lg:font-bold "
+          >
+            SHOP NOW!
+            <img className="w-7" src={Foto} alt="" />
+          </button>
           <FiArrowDown
             className="text-2xl mt-12 animate-bounce"
             style={{ opacity: iconOpacity }}
@@ -52,6 +69,7 @@ function Home() {
         </div>
         <PresentationsCard />
         <Pub />
+        <Farm />
         <Footer />
       </div>
     </>

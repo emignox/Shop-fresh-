@@ -1,10 +1,12 @@
 import { useState, FormEvent } from "react";
 import Button from "../components/button";
 import Logo from "../components/logo";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -21,6 +23,7 @@ function Login() {
 
     if (response.ok) {
       alert(data.message);
+      navigate("/home");
       // Qui puoi reindirizzare l'utente alla pagina successiva
     } else {
       alert(data.message);
@@ -58,6 +61,12 @@ function Login() {
           />
         </label>
         <Button value="Login" />
+        <p
+          className="hover:underline  mt-4 text-center"
+          onClick={() => navigate("/sign")}
+        >
+          Log-In
+        </p>
       </form>
     </>
   );

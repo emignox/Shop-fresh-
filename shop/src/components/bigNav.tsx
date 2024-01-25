@@ -16,33 +16,33 @@ function Nav() {
         </div>
 
         <div>
-          <ul className=" lg:flex lg:flex-row  lg:justify-around lg:items-center mt-2 mx-8">
+          <ul className=" lg:flex lg:flex-row  lg:justify-around lg:items-center mt-2 mx-8 cursor-pointer">
             <li
               className="lg:mx-5 lg:text-lg lg:font-bold"
-              onClick={() => navigate("./")}
+              onClick={() => navigate("/home")}
             >
               Home{" "}
             </li>
             <li
-              className="lg:mx-5 lg:text-lg lg:font-semibold"
+              className="lg:mx-5 lg:text-lg lg:font-semibold cursor-pointer"
               onClick={() => navigate("./")}
             >
               About Us
             </li>
             <li
-              className="lg:mx-5 lg:text-lg lg:font-semibold"
-              onClick={() => navigate("./")}
+              className="lg:mx-5 lg:text-lg lg:font-semibold cursor-pointer"
+              onClick={() => navigate("/shop")}
             >
               shop
             </li>
             <li
-              className="lg:mx-5 lg:text-lg lg:font-semibold"
+              className="lg:mx-5 lg:text-lg lg:font-semibold cursor-pointer"
               onClick={() => navigate("./")}
             >
               gallery
             </li>
             <li
-              className="lg:mr-32 lg:text-lg lg:font-semibold "
+              className="lg:mr-32 lg:text-lg lg:font-semibold  cursor-pointer"
               onClick={() => navigate("./")}
             >
               contact us
