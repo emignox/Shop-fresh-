@@ -48,7 +48,7 @@ function Shopping() {
                 <p className="text-custom-red text-center ">
                   Price: ${product.price}
                 </p>
-                <FiShoppingCart className="text-2xl text-custom-red text-center ml-7" />
+                <FiShoppingCart className="text-2xl text-custom-red text-center ml-7 hover:scale-150 transition duration-200 " />
               </div>
             </div>
           </div>
