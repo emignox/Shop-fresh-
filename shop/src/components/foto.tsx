@@ -12,11 +12,14 @@ function Foto() {
   return (
     <>
       <div className="flex flex-row justify-center items-center ">
-        <h1 className=" ">Our gallery</h1>
-        <FaImage className="tex-2xl my-8" />
+        <h1 className="lg:text-5xl ">Our gallery</h1>
+        <FaImage
+          className="tex-2xl my-8  lg:text-5xl ml-5 text-custom-red
+        "
+        />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-10">
         {Products.map((product: Product, index: number) => (
           <div
             key={index}

@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaShoppingBasket } from "react-icons/fa";
 import Category from "./CategoryButton";
+import { UseCart } from "./cartContext";
 
 function Shopping() {
   const navigate = useNavigate();
   const [currentCategory, setCurrentCategory] = useState("All");
+  const { addToCart } = UseCart();
 
   const filteredProducts: Product[] =
     currentCategory === "All"
@@ -18,10 +20,10 @@ function Shopping() {
   return (
     <>
       <div className="flex flex-row  justify-center items-center">
-        <h1 className="text-center my-20  lg:text-5xl text-custom-black mx-5 underline">
+        <h1 className="text-center my-20  text-2xl lg:text-5xl text-custom-black mx-5 underline">
           Start your shopping{" "}
         </h1>
-        <FaShoppingBasket className="text-custom-red text-5xl " />
+        <FaShoppingBasket className="text-custom-red lg:text-5xl  text-2xl" />
       </div>
 
       <Category setCurrentCategory={setCurrentCategory} />
@@ -45,10 +47,16 @@ function Shopping() {
                 {product.title}
               </h1>
               <div className="flex justify-center items-center">
-                <p className="text-custom-red text-center ">
+                <p className="text-custom-red text-center font-black ">
                   Price: ${product.price}
                 </p>
-                <FiShoppingCart className="text-2xl text-custom-red text-center ml-7 hover:scale-150 transition duration-200 " />
+                <button
+                  className="text-custom-red font-black flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-center lg:items-center lg:space-x-2"
+                  onClick={() => addToCart(product)}
+                >
+                  Add to cart
+                  <FiShoppingCart className="text-2xl text-custom-red text-center  hover:scale-150 transition duration-200 " />
+                </button>
               </div>
             </div>
           </div>

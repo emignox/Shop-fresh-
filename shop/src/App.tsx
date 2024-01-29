@@ -5,19 +5,24 @@ import SignUp from "./pages/signUp";
 import Log from "./pages/login";
 import Gallery from "./pages/gallery";
 import SingleProduct from "./pages/product";
+import { CartProvider } from "./components/cartContext";
+import Cart from "./pages/cart";
 
 function App() {
   return (
-    <Router basename="/">
-      <Routes>
-        <Route path="/sign" element={<SignUp />} />
-        <Route path="/login" element={<Log />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/shop" element={<ShopPage />} />
-        <Route path="/product/:productTitle" element={<SingleProduct />} />
-        <Route path="/" element={<Gallery />} />
-      </Routes>
-    </Router>
+    <CartProvider>
+      <Router basename="/">
+        <Routes>
+          <Route path="/sign" element={<SignUp />} />
+          <Route path="/login" element={<Log />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/product/:productTitle" element={<SingleProduct />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 }
 

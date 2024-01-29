@@ -10,10 +10,12 @@ import {
   FiSearch,
 } from "react-icons/fi";
 import Logo from "./logo";
+import { UseCart } from "./cartContext";
 
 const App: React.FC = () => {
   const navigate = useNavigate();
   const [isInputVisible, setInputVisible] = useState(false);
+  const { items } = UseCart();
 
   const menuItems = [
     { name: "Home", icon: <FiHome />, href: "/" },
@@ -69,9 +71,14 @@ const App: React.FC = () => {
           ))}
           <div
             onClick={() => navigate("/cart")}
-            className="text-2xl cursor-pointer"
+            className="text-2xl cursor-pointer flex justify-center items-center "
           >
             <FiShoppingCart style={{ color: "#e11c37" }} />
+            {items.length > 0 && (
+              <span className="bg-custom-black text-white mb-3 ml-1 text-xs h-3 w-3  rounded-full text-center  flex  justify-center items-center ">
+                {items.length}
+              </span>
+            )}
           </div>
         </div>
       </div>

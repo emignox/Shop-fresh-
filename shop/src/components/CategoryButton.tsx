@@ -7,7 +7,7 @@ export const ProductFilter: React.FC<ProductFilterProps> = ({
   setCurrentCategory,
 }) => {
   return (
-    <div className="flex flex-row justify-center my-4 space-x-2">
+    <div className="flex flex-row justify-center items-center my-4 space-x-2">
       <button
         className="flex rounded-md border-2 w-32 border-black focus:bg-custom-red  bg-custom-red lg:bg-custom-yellow  lg:hover:bg-custom-red transition duration-500 ease-in-out  justify-center mt-12  lg:w-52  cursor-pointer"
         onClick={() => setCurrentCategory("All")}
@@ -30,7 +30,7 @@ export const ProductFilter: React.FC<ProductFilterProps> = ({
         className="flex rounded-md border-2 w-32 border-black focus:bg-custom-red  bg-custom-red lg:bg-custom-yellow  lg:hover:bg-custom-red transition duration-500 ease-in-out  justify-center mt-12  lg:w-52  cursor-pointer"
         onClick={() => setCurrentCategory("Dried Fruit")}
       >
-        Dried Fruit
+        noix
       </button>
     </div>
   );
