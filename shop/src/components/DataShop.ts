@@ -34,7 +34,7 @@ export const Products: Product[] = [
   {
     title: "Cucumber",
     photoUrl:
-      "https://img.freepik.com/free-photo/top-view-cucumber-sliced-glass-bowl-with-copy-space-black-stone-horizontal_176474-1276.jpg?w=1800&t=st=1706260558~exp=1706261158~hmac=850b7648e304566f0f0ac444203510618ba921cca568192a5137574689b49058",
+      "https://img.freepik.com/free-photo/green-cucumber_144627-21625.jpg?size=626&ext=jpg&ga=GA1.1.1702596433.1693488652&semt=sph",
     category: "Vegetable",
     price: 1.99,
     description: "Fresh cucumbers, perfect for salads and snacking.",
@@ -186,7 +186,7 @@ export const Products: Product[] = [
   {
     title: "Potato",
     photoUrl:
-      "https://img.freepik.com/free-photo/top-view-peeled-out-potatoes-whole-inside-basket-dark-floor_140725-13633.jpg?w=1800&t=st=1706260517~exp=1706261117~hmac=3e06185d661640081beefddb47571eaba8571bdc518c0c125ff2cb54d1008619",
+      "https://img.freepik.com/free-photo/top-view-raw-potatoes-table_23-2148540406.jpg?w=1800&t=st=1706643278~exp=1706643878~hmac=f30385d68b6598ce988ef40a033d869c163ad74f35ce5c673f2da45247acc9ad",
     category: "Vegetable",
     price: 1.59,
     description: "Fresh potatoes, versatile and a staple in various cuisines.",
