@@ -30,8 +30,7 @@ const App: React.FC = () => {
         <div className=" flex justify-between items-center ">
           <Logo />
           <FiSearch
-            className="mx-5"
-            style={{ color: "#e11c37" }}
+            className="mx-5 text-custom-red"
             onClick={() => setInputVisible(!isInputVisible)}
           />
           {isInputVisible && (
@@ -42,9 +41,8 @@ const App: React.FC = () => {
             />
           )}
           <h2
-            className="text-right  mx-4"
+            className="text-right text-custom-red  mx-4"
             style={{
-              color: "#e11c37",
               fontStyle: "italic",
             }}
           >
