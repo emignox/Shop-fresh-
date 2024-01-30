@@ -13,7 +13,7 @@ function App() {
     <CartProvider>
       <Router basename="/">
         <Routes>
-          <Route path="/sign" element={<SignUp />} />
+          <Route path="/" element={<SignUp />} />
           <Route path="/login" element={<Log />} />
           <Route path="/home" element={<Home />} />
           <Route path="/shop" element={<ShopPage />} />

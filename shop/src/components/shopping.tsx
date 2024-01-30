@@ -32,7 +32,7 @@ function Shopping() {
         {filteredProducts.map((product: Product, index: number) => (
           <div
             key={index}
-            className="flex flex-col m-2 bg-custom-canarino rounded-xl overflow-hidden shadow-lg w-60 mx-12 hover:scale-105 transition duration-500 lg:my-10"
+            className="flex flex-col m-2 bg-custom-canarino rounded-xl overflow-hidden shadow-lg w-52 mx-2 hover:scale-105 transition duration-500 lg:my-10"
             onClick={() => navigate("./")}
           >
             <div className="w-full h-48 overflow-hidden">
