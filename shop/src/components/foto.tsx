@@ -23,7 +23,7 @@ function Foto() {
         {Products.map((product: Product, index: number) => (
           <div
             key={index}
-            className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto"
+            className="relative overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto"
             onClick={() => handleProductClick(product.title)}
           >
             <img
@@ -31,6 +31,9 @@ function Foto() {
               src={product.photoUrl}
               alt={product.title}
             />
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 transition-all duration-500 ease-in-out hover:bg-opacity-50 flex items-center justify-center">
+              <h1 className="text-white ">{product.title}</h1>
+            </div>
           </div>
         ))}
       </div>

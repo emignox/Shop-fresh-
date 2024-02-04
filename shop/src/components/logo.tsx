@@ -1,9 +1,12 @@
 import { GiFarmTractor } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 function Logo() {
+  const navigate = useNavigate();
   return (
     <div className="flex items-center  ">
       <svg
+        onClick={() => navigate("/about")}
         className="w-20 h-20 lg:w-full lg:h-full"
         xmlns="http://www.w3.org/2000/svg"
         height="45"

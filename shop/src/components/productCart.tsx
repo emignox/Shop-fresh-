@@ -24,7 +24,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
     <>
       <div className="p-4 bg-transparent shadow rounded flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-between lg:items-center ">
         <h2 className="text-lg font-bold mb-2">{product.title}</h2>
-        <p className="text-gray-700 mb-2">${product.price}</p>
+        <p className=" text-custom-red font-black mb-2">${product.price}</p>
         <img
           src={product.photoUrl}
           alt={product.title}
@@ -33,7 +33,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
 
         <button
           onClick={handleRemoveFromCart}
-          className=" bg-custom-red text-white  rounded hover:bg-red-600"
+          className=" bg-custom-red lg:w-20 text-white  rounded hover:bg-red-600"
         >
           Remove
         </button>

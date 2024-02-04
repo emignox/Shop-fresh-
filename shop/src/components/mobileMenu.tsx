@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const { items } = UseCart();
 
   const menuItems = [
-    { name: "Home", icon: <FiHome />, href: "/" },
+    { name: "Home", icon: <FiHome />, href: "/home" },
     { name: "Shop", icon: <FiShoppingBag />, href: "/shop" },
     { name: "Gallery", icon: <FiImage />, href: "/gallery" },
     { name: "Contact Us", icon: <FiMail />, href: "/contact" },

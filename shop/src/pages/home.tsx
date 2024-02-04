@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import Farm from "../components/farm";
 import Foto from "/papaya.png";
 import { useNavigate } from "react-router-dom";
+import Slide from "../components/sliderProduct";
 
 function Home() {
   const [iconOpacity, setIconOpacity] = useState(1);
@@ -42,9 +43,16 @@ function Home() {
             style={{ opacity: iconOpacity }}
           />
         </div>
+        <div>
+          <h1 className="text-center text-5xl animated-text">
+            More than a simple shop
+          </h1>
+        </div>
         <PresentationsCard />
         <Pub />
+
         <Farm />
+        <Slide />
 
         <Footer />
       </div>
@@ -57,7 +65,7 @@ function Home() {
         <div className=" justify-center items-center flex flex-col ">
           <button
             onClick={() => navigate("/shop")}
-            className="flex rounded-md border-2 w-32 border-black bg-custom-red lg:bg-custom-yellow  lg:hover:bg-custom-red transition duration-500 ease-in-out  justify-center mt-12  lg:w-52  cursor-pointer  text-custom-black  text-lg lg:text-2xl lg:font-bold "
+            className="flex rounded-md  border-2 w-52 border-black bg-custom-red lg:bg-custom-yellow  lg:hover:bg-custom-red transition duration-500 ease-in-out  justify-center mt-12  lg:w-52  cursor-pointer  text-custom-black  text-lg lg:text-2xl lg:font-bold "
           >
             SHOP NOW!
             <img className="w-7" src={Foto} alt="" />
@@ -70,6 +78,8 @@ function Home() {
         <PresentationsCard />
         <Pub />
         <Farm />
+        <Slide />
+
         <Footer />
       </div>
     </>

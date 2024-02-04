@@ -33,7 +33,7 @@ function PresentationsCards() {
 
   return (
     <>
-      <div className="   bg-custom-canarino  h-auto rounded-2xl lg:mx-12 mx-5 my-12 lg:mt-72 pb-10  lg:shadow-lg">
+      <div className="   bg-custom-canarino  h-auto rounded-2xl lg:mx-12 mx-5 my-12 lg:mt-20 pb-10  lg:shadow-lg">
         <div className="flex justify-center items-center">
           <GiThreeLeaves className="text-green-700 text-5xl" />
 

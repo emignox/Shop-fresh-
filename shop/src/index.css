@@ -67,3 +67,31 @@ h1 {
 .fadeInOut {
   animation: fadeInOut 7s infinite;
 }
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+}
+
+.animated-text {
+  animation: jelly 3s;
+}

@@ -28,11 +28,11 @@ function Shopping() {
 
       <Category setCurrentCategory={setCurrentCategory} />
 
-      <div className="flex flex-wrap justify-around items-stretch my-20">
+      <div className="flex flex-wrap justify-around items-stretch my-20 mx-20">
         {filteredProducts.map((product: Product, index: number) => (
           <div
             key={index}
-            className="flex flex-col m-2 bg-custom-canarino rounded-xl overflow-hidden shadow-lg w-52 mx-2 hover:scale-105 transition duration-500 lg:my-10"
+            className="flex flex-col m-2 bg-custom-canarino rounded-xl overflow-hidden shadow-lg w-52  hover:scale-105 transition duration-500 lg:my-10"
             onClick={() => navigate("./")}
           >
             <div className="w-full h-48 overflow-hidden">
@@ -43,7 +43,7 @@ function Shopping() {
               />
             </div>
             <div className="flex-grow p-4 ">
-              <h1 className="text-lg font-bold mb-2 text-center ">
+              <h1 className="text-lg font-bold mb-2 text-center  ">
                 {product.title}
               </h1>
               <div className="flex justify-center items-center">
@@ -54,8 +54,7 @@ function Shopping() {
                   className="text-custom-red font-black flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-center lg:items-center lg:space-x-2"
                   onClick={() => addToCart(product)}
                 >
-                  Add to cart
-                  <FiShoppingCart className="text-2xl text-custom-red text-center  hover:scale-150 transition duration-200 " />
+                  <FiShoppingCart className="text-3xl text-custom-red text-center ml-5  hover:scale-150 transition duration-200 " />
                 </button>
               </div>
             </div>

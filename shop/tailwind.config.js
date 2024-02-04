@@ -9,6 +9,14 @@ export default {
         "custom-yellow": "#e9b226",
         "custom-canarino": "#f0c043",
       },
+      scrollbarHide: {
+        "scrollbar-hide": "webkit-scrollbar {display: none;}",
+      },
+    },
+    variants: {
+      extend: {
+        scrollbarHide: ["dark"],
+      },
     },
   },
   plugins: [],

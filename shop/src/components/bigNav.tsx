@@ -27,7 +27,7 @@ function Nav() {
             </li>
             <li
               className="lg:mx-5 lg:text-lg lg:font-semibold cursor-pointer"
-              onClick={() => navigate("./")}
+              onClick={() => navigate("/about")}
             >
               About Us
             </li>
@@ -70,7 +70,7 @@ function Nav() {
             >
               <FiShoppingCart style={{ color: "#e11c37" }} />
               {items.length > 0 && (
-                <span className="bg-custom-black text-white mb-3 ml-1 text-xs h-3 w-3  rounded-full text-center  flex  justify-center items-center ">
+                <span className="bg-custom-black text-white mb-3 ml-1 text-xs h-5 w-5  rounded-full text-center  flex  justify-center items-center ">
                   {items.length}
                 </span>
               )}
