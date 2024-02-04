@@ -84,6 +84,12 @@ function App() {
             Log-In
           </p>
           <p className=" hover:underline">forgot password</p>
+          <p
+            onClick={() => navigate("/home")}
+            className=" ml-5 hover:underline"
+          >
+            Visit like guest
+          </p>
         </div>
       </form>
     </>

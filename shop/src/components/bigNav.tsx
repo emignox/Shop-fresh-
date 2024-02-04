@@ -45,13 +45,12 @@ function Nav() {
             </li>
             <li
               className="lg:mr-32 lg:text-lg lg:font-semibold  cursor-pointer"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/contact")}
             >
               contact us
             </li>
             <FiSearch
-              className="mx-5"
-              style={{ color: "#e11c37" }}
+              className="mx-5  text-custom-red"
               onClick={() => setInputVisible(!isInputVisible)} // Inverti il valore di isInputVisible
             />
             {isInputVisible && (
@@ -68,7 +67,7 @@ function Nav() {
               onClick={() => navigate("/cart")}
               className="text-2xl cursor-pointer mx-3 flex items-center"
             >
-              <FiShoppingCart style={{ color: "#e11c37" }} />
+              <FiShoppingCart className=" text-custom-red" />
               {items.length > 0 && (
                 <span className="bg-custom-black text-white mb-3 ml-1 text-xs h-5 w-5  rounded-full text-center  flex  justify-center items-center ">
                   {items.length}

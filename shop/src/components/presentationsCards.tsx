@@ -4,25 +4,25 @@ import { GiThreeLeaves } from "react-icons/gi";
 
 const images = [
   {
-    src: "/fruits.avif",
+    src: "./fruits.avif",
     alt: "Clementine",
     title: "Discover our fruits",
-    icone: "/pomme.png",
+    icone: "./pomme.png",
     description: "Explore succulent, exotic delights in vibrant freshness.",
   },
   {
-    src: "/nuts.avif",
+    src: "./nuts.avif",
     alt: "Noix",
     title: "Discover our dry fruit",
-    icone: "/pistache.png",
+    icone: "./pistache.png",
 
     description: "Indulge in rich, wholesome goodness for delightful snacking.",
   },
   {
-    src: "/tomate.avif",
+    src: "./tomate.avif",
     alt: "Poivron",
     title: "Discover our vegetables",
-    icone: "/piselli.png",
+    icone: "./piselli.png",
 
     description: "Embark on a culinary journey with fresh, flavorful produce.",
   },

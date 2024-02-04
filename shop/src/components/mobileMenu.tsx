@@ -71,7 +71,7 @@ const App: React.FC = () => {
             onClick={() => navigate("/cart")}
             className="text-2xl cursor-pointer flex justify-center items-center "
           >
-            <FiShoppingCart style={{ color: "#e11c37" }} />
+            <FiShoppingCart className=" text-custom-red" />
             {items.length > 0 && (
               <span className="bg-custom-black text-white mb-3 ml-1 text-xs h-3 w-3  rounded-full text-center  flex  justify-center items-center ">
                 {items.length}
