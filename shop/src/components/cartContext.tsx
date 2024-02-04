@@ -7,6 +7,7 @@ interface CartContextProps {
   addToCart: (item: Product) => void;
   removeFromCart: (item: Product) => void;
   updateQuantity: (item: Product, quantity: number) => void;
+  clearCart: () => void;
 }
 
 interface CartItem {
@@ -59,6 +60,9 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       )
     );
   };
+  const clearCart = () => {
+    setCartItems([]);
+  };
 
   return (
     <CartContext.Provider
@@ -67,6 +71,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
         addToCart,
         removeFromCart,
         updateQuantity,
+        clearCart,
       }}
     >
       {children}

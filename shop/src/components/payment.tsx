@@ -7,11 +7,21 @@ import { useState } from "react";
 import CardPayement from "./cardPayment";
 
 function Payement() {
-  const { items } = UseCart();
+  const { items, clearCart } = UseCart();
   const [selectedPayment, setSelectedPayment] = useState("");
 
   const handleClick = (payment: string) => {
     setSelectedPayment(payment);
+  };
+
+  const handlePayment = () => {
+    if (items.length > 0) {
+      // qui puoi implementare la logica di pagamento
+      clearCart(); // Svuota il carrello dopo il pagamento
+      alert("tankyou for your purchase!");
+    } else {
+      alert("your cart is empty! ");
+    }
   };
 
   // Calcola il prezzo totale
@@ -69,6 +79,12 @@ function Payement() {
           </div>
           <CardPayement />
           <h2 className="text-2xl font-bold my-10">Total: ${totalPrice}</h2>
+          <button
+            onClick={handlePayment}
+            className="h-12 bg-custom-red text-custom-yellow rounded-2xl text-3xl hover:bg-custom-black transition duration-500 hover:text-white"
+          >
+            Pay
+          </button>
         </div>
       </div>
     </>

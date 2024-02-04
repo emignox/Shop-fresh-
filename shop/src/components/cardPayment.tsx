@@ -9,7 +9,7 @@ function dataCard() {
           Card Number
           <br />
           <input
-            type="text"
+            type="number"
             className="mt-1  block w-72 shadow-sm sm:text-sm  rounded-md h-8  de   "
           />
         </label>
@@ -20,7 +20,7 @@ function dataCard() {
           Expiration Date
           <br />
           <input
-            type="text"
+            type="number"
             className="mt-1  block  w-32  shadow-sm sm:text-sm  rounded-md h-8 "
           />
         </label>
